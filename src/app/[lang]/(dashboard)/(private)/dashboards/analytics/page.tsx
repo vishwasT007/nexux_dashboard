@@ -2,37 +2,37 @@
 import Grid from '@mui/material/Grid2'
 
 // Components Imports
-import Award from '@views/dashboards/analytics/Award'
-import Transactions from '@views/dashboards/analytics/Transactions'
-import WeeklyOverview from '@views/dashboards/analytics/WeeklyOverview'
-import TotalEarning from '@views/dashboards/analytics/TotalEarning'
-import LineChart from '@views/dashboards/analytics/LineChart'
-import DistributedColumnChart from '@views/dashboards/analytics/DistributedColumnChart'
-import Performance from '@views/dashboards/analytics/Performance'
-import DepositWithdraw from '@views/dashboards/analytics/DepositWithdraw'
-import SalesByCountries from '@views/dashboards/analytics/SalesByCountries'
+import Transactions from '@views/dashboards/crm/Transactions'
+import RevenueReport from '@views/dashboards/crm/RevenueReport'
+import SalesOverview from '@views/dashboards/crm/SalesOverview'
+import TotalSales from '@views/dashboards/crm/TotalSales'
+import LineAreaChart from '@views/dashboards/crm/LineAreaChart'
+import WeeklySales from '@views/dashboards/crm/WeeklySales'
+import ActivityTimeline from '@views/dashboards/crm/ActivityTimeline'
+import DeveloperMeetup from '@views/dashboards/crm/DeveloperMeetup'
+import MeetingSchedule from '@views/dashboards/crm/MeetingSchedule'
 import CardStatVertical from '@components/card-statistics/Vertical'
-import Table from '@views/dashboards/analytics/Table'
+import UpgradePlan from '@views/dashboards/crm/UpgradePlan'
 
 const DashboardAnalytics = () => {
   return (
     <Grid container spacing={6}>
       <Grid size={{ xs: 12, md: 4 }}>
-        <Award />
+        <UpgradePlan />
       </Grid>
       <Grid size={{ xs: 12, md: 8, lg: 8 }}>
         <Transactions />
       </Grid>
       <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-        <WeeklyOverview />
+        <WeeklySales />
       </Grid>
       <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-        <TotalEarning />
+        <TotalSales />
       </Grid>
       <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <Grid container spacing={6}>
           <Grid size={{ xs: 12, sm: 6 }}>
-            <LineChart />
+            <LineAreaChart />
           </Grid>
           <Grid size={{ xs: 12, sm: 6 }}>
             <CardStatVertical
@@ -57,21 +57,21 @@ const DashboardAnalytics = () => {
             />
           </Grid>
           <Grid size={{ xs: 12, sm: 6 }}>
-            <DistributedColumnChart />
+            <SalesOverview />
           </Grid>
         </Grid>
       </Grid>
       <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-        <Performance />
+        <RevenueReport />
       </Grid>
       <Grid size={{ xs: 12, lg: 8 }}>
-        <DepositWithdraw />
+        <DeveloperMeetup />
       </Grid>
       <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-        <SalesByCountries />
+        <MeetingSchedule />
       </Grid>
       <Grid size={{ xs: 12, md: 6, lg: 8 }}>
-        <Table />
+        <ActivityTimeline />
       </Grid>
     </Grid>
   )
